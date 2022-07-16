@@ -12,16 +12,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
     window.addEventListener('mousemove', (e: MouseEvent) => {
       const offsetX = 0.5 - e.pageX / w // cursor position X
       const offsetY = 0.5 - e.pageY / h // cursor position Y
-      const dy = e.pageY - h / 2 // @h/2 = center of poster
-      const dx = e.pageX - w / 2 // @w/2 = center of poster
-      const theta = Math.atan2(dy, dx) // angle between cursor and center of poster in RAD
-      let angle = theta * 180 / Math.PI - 90 // convert rad in degrees
-      const offsetPoster = 12
-      setTransformSettings('translate3d(0, ' + -offsetX * offsetPoster + 'px, 0) rotateX(' + (-offsetY * offsetPoster) + 'deg) rotateY(' + (offsetX * (offsetPoster * 2)) + 'deg)')
+      const multiplier = 10
+      setTransformSettings('translate3d(0, ' + -offsetX * multiplier + 'px, 0) rotateX(' + (-offsetY * multiplier) + 'deg) rotateY(' + (offsetX * (multiplier * 2)) + 'deg)')
       // get angle between 0-360
-      if (angle < 0) {
-        angle = angle + 360
-      }
     })
   }, [])
   return (
