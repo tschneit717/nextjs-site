@@ -1,0 +1,52 @@
+@import './colors.css';
+@import './typography.css';
+
+* {
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transform-style: preserve-3d;
+  transform: perspective(60rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+html, body {
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+  height: 100%;
+  width: 100%;
+}

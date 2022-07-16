@@ -1,0 +1,65 @@
+.wrapper {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+  color: currentColor;
+}
+
+.wrapper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: var(--primary);
+  transform: scale(0);
+  transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+  z-index: 1;
+}
+
+.mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: currentColor;
+  top: 0;
+  height: 49%;
+  transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+}
+
+.mask + .mask {
+  top: 49%;
+  height: 100 - 49%;
+}
+
+.mask + .mask span {
+  transform: translateY(-49%);
+}
+
+.wrapper:active,
+.wrapper:hover {
+  color: transparent;
+}
+
+.wrapper:hover .mask,
+.wrapper:active .mask {
+  color: #FFF; transform: skewX(12deg) translateX(5px);
+}
+
+.wrapper:hover .mask + .mask,
+.wrapper:active .mask + .mask {
+  transform: skewX(12deg) translateX(-5px);
+}
+
+.wrapper:hover::before,
+.wrapper:active::before {
+  transform: scale(1); 
+}
+
+.block {
+  display: block;
+}
