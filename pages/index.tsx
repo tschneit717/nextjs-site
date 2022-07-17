@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Card } from '../components/Card/Card'
 
 export default function Home () {
   return (
@@ -10,8 +11,9 @@ export default function Home () {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Hello World!
         </h1>
+        <Card title='Title' subtitle='Subtitle' description='Description' image='/images/tom.jpg' imageAlt='Alt text' />
       </main>
 
       <footer></footer>

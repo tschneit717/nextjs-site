@@ -1,12 +1,15 @@
 // import App from 'next/app'
 import { Layout } from '../components/Layout/Layout'
+import { MousePositionProvider } from './../context/MousePositionContext'
 import '../assets/styles/globals.css'
 
 function MyApp ({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <MousePositionProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </MousePositionProvider>
   )
 }
 

@@ -1,0 +1,44 @@
+.card {
+  background: var(--dark-secondary);
+  border: 2px solid var(--dark-secondary);
+  border-radius: 8px;
+  padding: 1rem
+}
+
+.imageWrapper {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.imageWrapper span {
+  border-radius: 50%;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.header {
+
+}
+
+.title {
+
+}
+
+.subtitle {
+
+}
+
+.content {
+
+}
+
+.description {
+
+}

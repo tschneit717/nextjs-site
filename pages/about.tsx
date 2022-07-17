@@ -10,7 +10,7 @@ export default function About () {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+         Who am I
         </h1>
       </main>
 
