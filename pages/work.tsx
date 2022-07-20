@@ -4,7 +4,7 @@ export default function Work () {
   return (
     <div className="container">
       <Head>
-        <title>Tom Schneider</title>
+        <title>Work - Tom Schneider</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

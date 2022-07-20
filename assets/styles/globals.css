@@ -1,5 +1,6 @@
 @import './colors.css';
 @import './typography.css';
+@import './animations.css';
 
 * {
   margin: 0;

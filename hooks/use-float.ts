@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 export const useFloat = (x, y, sensitivity = 10) => {
-  const [transformSettings, setTransformSettings] = useState('')
+  const transformSettings = useRef('')
 
   useEffect(() => {
-    setTransformSettings('translate3d(0, ' + -x * sensitivity + 'px, 0) rotateX(' + (-y * sensitivity) + 'deg) rotateY(' + (x * (sensitivity * 2)) + 'deg)')
+    transformSettings.current = 'translate3d(0, ' + -x * sensitivity + 'px, 0) rotateX(' + (-y * sensitivity) + 'deg) rotateY(' + (x * (sensitivity * 2)) + 'deg)'
   })
 
-  return transformSettings
+  return transformSettings.current
 }

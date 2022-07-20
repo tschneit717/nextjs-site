@@ -4,7 +4,7 @@ export default function Uses () {
   return (
     <div className="container">
       <Head>
-        <title>Tom Schneider</title>
+        <title>Uses - Tom Schneider</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

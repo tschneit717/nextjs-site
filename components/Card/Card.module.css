@@ -1,8 +1,9 @@
 .card {
-  background: var(--dark-secondary);
-  border: 2px solid var(--dark-secondary);
+  /* background: var(--dark-secondary); */
+  /* border: 2px solid var(--dark-secondary);  */
   border-radius: 8px;
-  padding: 1rem
+  padding: 2rem;
+  overflow: visible;
 }
 
 .imageWrapper {

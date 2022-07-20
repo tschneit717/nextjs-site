@@ -1,16 +1,16 @@
 import Head from 'next/head'
 
-export default function Home () {
+export default function Uses () {
   return (
     <div className="container">
       <Head>
-        <title>Tom Schneider</title>
+        <title>Contact me - Tom Schneider</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Hello World!
+          Want to get a hold of me?
         </h1>
       </main>
 
