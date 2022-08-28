@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Card } from '../components/Card/Card'
 
 export default function Home () {
   return (
@@ -10,10 +9,18 @@ export default function Home () {
       </Head>
 
       <main>
-        <h1 className="title">
-          Hello World!
+        <p>Hi, my name is</p>
+        <h1 className="h1 primary">
+          Tom Schneider
         </h1>
-        <Card title='Title' subtitle='Subtitle' description='Description' image='/images/tom.jpg' imageAlt='Alt text' />
+        <p className='h2 secondary'>I build things</p>
+        <p>
+          I am a software engineer specializing in implementing beautiful
+          and accessible UI interfaces. I am teaching myself Java with the
+          hopes of expanding my role into a full stack developer position.
+          I currently work at WillowTree as a Senior Software Engineer
+        </p>
+
       </main>
 
       <footer></footer>

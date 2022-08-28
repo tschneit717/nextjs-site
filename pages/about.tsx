@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Card } from '../components/Card/Card'
 
 export default function About () {
   return (
@@ -12,6 +13,8 @@ export default function About () {
         <h1 className="title">
          Who am I
         </h1>
+
+        <Card title='Title' subtitle='Subtitle' description='Description' image='/images/tom.jpg' imageAlt='Alt text' />
       </main>
 
       <footer></footer>

@@ -54,26 +54,50 @@
   font-style: italic;
 }
   
-p {
+p, .p {
   font-size: 1rem;
 }
 
-h1 {
+h1, .h1 {
   font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
-h2 {
+h2, .h2 {
   font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
-h3 {
+h3, .h3 {
   font-size: 2.5rem;
 }
 
-h4 {
+h4, .h4 {
   font-size: 2rem;
 }
 
-h5 {
+h5, .h5 {
   font-size: 1.75rem;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.tertiary {
+  color: var(--tertiary);
+}
+
+.light {
+  color: var(--light);
+}
+
+.dark {
+  color: var(--dark);
 }
