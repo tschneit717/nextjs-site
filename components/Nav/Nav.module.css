@@ -7,24 +7,28 @@
 
 .navListItem {
   list-style: none;
-  font-size: 1rem;
+  font-size: .75rem;
   font-weight: 300;
-  transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, transform 0.1s ease-in-out;
   border-radius: 1rem;
   box-sizing: border-box;
   border: 1px solid var(--light);
+  transform: perspective(100px) translate3d(0px, 0, 0px);
 }
 
 
 .navListItem:hover,
 .navListItem:focus-within {
   border: 1px solid var(--primary);
+  transform: perspective(100px) translate3d(0px, 0px, -10px);
 }
 
 .navListItem a {
+  outline: none;
   border-radius: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: block;
+  line-height: 1;
+  padding: 0.5rem 1.25rem;
   color: var(--light);
   transition: color 0.2s ease-in-out;
 }

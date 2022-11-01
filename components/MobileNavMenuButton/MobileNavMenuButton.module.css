@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  background: none;
+  border: var(--light) 1px solid; 
+  height: 40px;
+  width: 40px;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    display: none;
+  }
+}
+
+.bar {
+  border-radius: 1rem;
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 2px;
+  background: var(--light);
+}
+
+.active.button {
+  justify-content: center;
+}
+.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active .bar:nth-child(2) {
+  display: none;
+}
+.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+

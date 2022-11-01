@@ -4,7 +4,7 @@ import styles from './Nav.module.css'
 import cn from 'classnames'
 import { useRouter } from 'next/router'
 
-export const Nav = ({ routes }: NavProps) => {
+export const Nav = ({ routes, mobileNavActive }: NavProps) => {
   const router = useRouter()
   routes.map(item => {
   })
