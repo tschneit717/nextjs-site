@@ -2,10 +2,14 @@
 import { Layout } from '../components/Layout/Layout'
 import { MousePositionProvider } from './../context/MousePositionContext'
 import '../assets/styles/globals.css'
+import { TransitionContainer } from '../components/Transition/Transition'
 
 function MyApp ({ Component, pageProps }) {
   return (
     <MousePositionProvider>
+
+      <TransitionContainer/>
+
       <Layout>
         <Component {...pageProps} />
       </Layout>
