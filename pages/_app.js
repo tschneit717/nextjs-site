@@ -1,18 +1,17 @@
 // import App from 'next/app'
 import { Layout } from '../components/Layout/Layout'
 import { MousePositionProvider } from './../context/MousePositionContext'
+import { TransitionProvider } from './../context/TransitionContext'
 import '../assets/styles/globals.css'
-import { TransitionContainer } from '../components/Transition/Transition'
 
 function MyApp ({ Component, pageProps }) {
   return (
     <MousePositionProvider>
-
-      <TransitionContainer/>
-
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <TransitionProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </TransitionProvider>
     </MousePositionProvider>
   )
 }

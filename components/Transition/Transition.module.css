@@ -41,7 +41,7 @@
 }
 
 .primary, .secondary {
-  width: calc(50vw - 50px);
+  width: 70vw;
   min-width: 300px;
 }
 
