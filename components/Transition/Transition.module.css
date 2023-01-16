@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   transform: translateX(0vw);
-  z-index: 0;
+  z-index: 1000;
 }
 .transitionContainer[data-hidden="true"] {
   display: none;
@@ -31,7 +31,7 @@
   background: var(--light);
   min-width: 25px;
   box-shadow: 0px 0px 30px 5px var(--dark);
-  z-index: 1000;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 768px ) {
@@ -46,10 +46,13 @@
 }
 
 [data-status="enter"].transitionContainer {
-  animation: floatIn 0.5s ease-in-out forwards;
+  animation: floatIn 0.75s ease-in-out forwards;
+}
+[data-status="hidden"].transitionContainer {
+  display: none;
 }
 [data-status="exit"].transitionContainer {
-  animation: floatOut 0.5s ease-in-out forwards;
+  animation: floatOut 0.75s ease-in-out forwards;
 }
 
 @keyframes floatIn {

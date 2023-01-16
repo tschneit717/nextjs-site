@@ -19,7 +19,7 @@ export const TransitionProvider: FC<PropsWithChildren> = ({ children }) => {
     setTransitionStatus('enter')
     setTimeout(() => {
       router.push(url)
-    }, 400)
+    }, 700)
   }
   const routerWrapper = {
     push: (url: string) => {

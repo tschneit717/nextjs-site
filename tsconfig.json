@@ -20,7 +20,7 @@
     "target": "es5"
   },
   "include": [
-    "next-env.d.ts",
+    "src/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

@@ -7,7 +7,7 @@
 
 .navListItem {
   list-style: none;
-  font-size: .75rem;
+  font-size: 1rem;
   font-weight: 300;
   transition: border 0.2s ease-in-out, transform 0.1s ease-in-out;
   border-radius: 1rem;
@@ -20,7 +20,7 @@
 .navListItem:hover,
 .navListItem:focus-within {
   border: 1px solid var(--primary);
-  transform: perspective(100px) translate3d(0px, 0px, -10px);
+  transform: perspective(100px) translate3d(0px, 0px, 10px);
 }
 
 .navListItem a {
