@@ -4,11 +4,11 @@ import { useContext } from 'react'
 import { TransitionContext } from '../../context/TransitionContext'
 
 export const TransitionContainer = () => {
-  const { isTransitioning } = useContext(TransitionContext)
+  const { transitionStatus } = useContext(TransitionContext)
 
   // Outer wrapper to position
   return (
-    <div data-hidden={!isTransitioning} className={styles.transitionContainer}>
+    <div data-status={transitionStatus} className={styles.transitionContainer}>
       {/* Blue container */}
       <div className={cn(styles.bar, styles.primary)}></div>
       {/* white stripe */}

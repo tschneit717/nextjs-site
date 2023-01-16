@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
-import { createContext, Dispatch, FC, PropsWithChildren, SetStateAction, useCallback, useEffect, useState } from 'react'
+import { createContext, Dispatch, FC, PropsWithChildren, SetStateAction, useEffect, useState } from 'react'
 
 interface TransitionContextInterface {
-  isTransitioning: boolean;
-  toggleIsTransitioning: Dispatch<SetStateAction<boolean>>;
+  transitionStatus: string;
+  setTransitionStatus: Dispatch<SetStateAction<string>>;
   routerWrapper: {
     push: (url: string) => void;
   }
@@ -13,33 +13,36 @@ export const TransitionContext = createContext<TransitionContextInterface | null
 
 export const TransitionProvider: FC<PropsWithChildren> = ({ children }) => {
   const router = useRouter()
-  const [isTransitioning, toggleIsTransitioning] = useState(false)
+  const [transitionStatus, setTransitionStatus] = useState('hidden')
 
-  const startAnimation = () => {
-    toggleIsTransitioning(true)
+  const startAnimation = (url) => {
+    setTransitionStatus('enter')
+    setTimeout(() => {
+      router.push(url)
+    }, 400)
   }
-
   const routerWrapper = {
     push: (url: string) => {
-      startAnimation()
-      router.push(url)
+      startAnimation(url)
     }
   }
 
   useEffect(() => {
-    const routeChangeStart = (url, { shallow }) => {
-      startAnimation()
+    const routeChangeEnd = (url, { shallow }) => {
+      setTimeout(() => {
+        setTransitionStatus('exit')
+      }, 100)
     }
 
-    router.events.on('routeChangeStart', routeChangeStart)
+    router.events.on('routeChangeComplete', routeChangeEnd)
 
     return () => {
-      router.events.off('routeChangeStart', routeChangeStart)
+      router.events.off('routeChangeComplete', routeChangeEnd)
     }
   }, [])
 
   return (
-    <TransitionContext.Provider value={{ isTransitioning, toggleIsTransitioning, routerWrapper } }>
+    <TransitionContext.Provider value={{ transitionStatus, setTransitionStatus, routerWrapper } }>
       {children}
     </TransitionContext.Provider>
   )
