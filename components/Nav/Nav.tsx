@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { NavProps } from './Nav.interface'
 import styles from './Nav.module.css'
 import cn from 'classnames'
@@ -10,7 +9,7 @@ export const Nav = ({ routes, mobileNavActive }: NavProps) => {
   const router = useRouter()
   const { routerWrapper } = useContext(TransitionContext)
   return (
-    <nav className={styles.nav}>
+    <nav className={cn(styles.nav, { [styles.active]: mobileNavActive })}>
       <ul className={styles.navList}>
         {routes.map(route => (
           <li className={cn(styles.navListItem, router.pathname === route.path && styles.activeLink)} key={route.path} >

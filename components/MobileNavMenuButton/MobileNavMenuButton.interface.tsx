@@ -1,6 +1,6 @@
-import { SetStateAction } from 'react'
+import { MouseEventHandler } from 'react'
 
 export interface MobileNavMenuButtonProps {
-  callback: SetStateAction<boolean>;
+  callback: MouseEventHandler<HTMLButtonElement>;
   state: boolean;
 }

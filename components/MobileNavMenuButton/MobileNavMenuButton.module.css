@@ -3,13 +3,16 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  position: relative;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: var(--light) 1px solid; 
   height: 40px;
   width: 40px;
   padding: 0.25rem;
   cursor: pointer;
+  z-index: 101;
 }
 
 @media only screen and (min-width: 768px) {
@@ -25,18 +28,19 @@
   width: 25px;
   height: 2px;
   background: var(--light);
+  transition: transform 0.2s ease-in-out;
 }
 
 .active.button {
   justify-content: center;
 }
 .active .bar:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(1px);
 }
 .active .bar:nth-child(2) {
   display: none;
 }
 .active .bar:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg)  translateY(-1px);
 }
 

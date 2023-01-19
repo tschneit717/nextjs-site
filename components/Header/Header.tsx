@@ -9,9 +9,11 @@ export function Header () {
   const [mobileNavActive, toggleMobileNavActive] = useState(false)
   return (
     <header className={styles.header}>
-      <Image src="/icons/ts_logo--light.svg" height={30} width={30} />
-      <Nav routes={routes} mobileNavActive={mobileNavActive} />
-      <MobileNavMenuButton state={mobileNavActive} callback={() => toggleMobileNavActive(!mobileNavActive)} />
+      <div className={styles.wrapper}>
+        <Image src="/icons/ts_logo--light.svg" height={30} width={30} />
+        <Nav routes={routes} mobileNavActive={mobileNavActive} />
+        <MobileNavMenuButton state={mobileNavActive} callback={() => toggleMobileNavActive(!mobileNavActive)} />
+      </div>
     </header>
   )
 }

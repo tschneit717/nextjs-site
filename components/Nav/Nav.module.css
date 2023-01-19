@@ -1,8 +1,48 @@
+.nav {
+  position: absolute;
+  transform: translateX(100vw);
+  transition: transform 0.2s ease-out;
+  top:0;
+  right: 0;
+  background: var(--dark);
+  display: block;
+  padding: 6rem 1.5rem;
+  height: 100vh;
+  z-index: 100;
+}
+
 .navList {
+  flex-direction: column;
+  justify-content: center;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  padding:0;
   gap: 1rem;
+}
+
+.nav.active {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    position: relative;
+    background: none;
+    z-index: initial;
+    height: auto;
+    padding: 0;
+    transform: none;
+    top: auto;
+    right: auto;
+  }
+
+  .navList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
 }
 
 .navListItem {
@@ -15,6 +55,7 @@
   border: 1px solid var(--light);
   transform: perspective(100px) translate3d(0px, 0, 0px);
 }
+
 
 
 .navListItem:hover,
@@ -31,6 +72,7 @@
   padding: 0.5rem 1.25rem;
   color: var(--light);
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .navListItem:hover a,

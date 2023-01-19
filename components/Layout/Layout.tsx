@@ -14,9 +14,9 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <TransitionContainer/>
+      <Header />
       <div className={styles.wrapper}>
         <div className={styles.transformLayer} style={{ transform: useFloat(x, y, 5) }}>
-          <Header />
           {children}
           <Footer />
         </div>
