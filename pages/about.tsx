@@ -14,7 +14,7 @@ export default function About () {
          Who am I
         </h1>
         <img src='/images/tom.jpg' />
-        <p>I&#39;ve been a professional software engineer for {years} years, but if you clicked here you&#39;re more interesting in learning about me as a person than my career.</p>
+        <p>I've been a professional software engineer for {years} years, but if you clicked here you're more interesting in learning about me as a person than my career.</p>
 
         <p>I currently live in Columbus, OH with my Fiance, Anna, three cats and a dog. I am originally from Cleveland, OH and went to school at Bowling Green State University. At University I started my academic career as an art major with hopes of getting into graphic design or animation. After a year in the program, I pivoted to Visual Communication Technology. There I specialized in video production and web design. I originally hoped to create documentaries and work in video production, but as fate would have it I turned out to be a better programmer. In school I created a short documentary on <a href="https://www.youtube.com/watch?v=ZWfyBgj7hXE" target="_blank" rel="noreferrer">Dungeons & Dragons</a> (before it was even cool). I still have a few hours of raw footage on a hard drive should I ever decide to revisit it.</p>
 
