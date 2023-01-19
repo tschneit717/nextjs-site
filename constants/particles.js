@@ -1,3 +1,17 @@
+export const MOVE_DIRECTION = {
+  none: 'none',
+  bottom: 'bottom',
+  bottomLeft: 'bottomLeft',
+  bottomRight: 'bottomRight',
+  left: 'left',
+  right: 'right',
+  top: 'top',
+  topLeft: 'topLeft',
+  topRight: 'topRight',
+  outside: 'outside',
+  inside: 'inside'
+}
+
 export const settings = {
   fpsLimit: 120,
   interactivity: {
@@ -37,7 +51,7 @@ export const settings = {
       enable: true
     },
     move: {
-      direction: 'none',
+      direction: MOVE_DIRECTION.none,
       enable: true,
       outModes: {
         default: 'bounce'

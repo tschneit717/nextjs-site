@@ -1,10 +1,9 @@
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import { Container, Engine } from 'tsparticles-engine'
-import { settings } from './../../constants/particles'
+import { settings } from '../../constants/particles'
 const ParticleContainer = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine) => {
     console.log(engine)
 
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
@@ -13,7 +12,7 @@ const ParticleContainer = () => {
     await loadFull(engine)
   }, [])
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container) => {
     await console.log(container)
   }, [])
   return (

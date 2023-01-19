@@ -23,7 +23,7 @@
     "src/next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Particles/Particles.jsx", "constants/particles.js"  ],
   "exclude": [
     "node_modules"
   ]
